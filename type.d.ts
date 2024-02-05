@@ -21,6 +21,6 @@ interface PoolData {
     claimedAddresses: string[];
     numWinners:  number;
     freeEntry: boolean;
-    status: PoolStatus;
+    status: number;
     id: number
 }

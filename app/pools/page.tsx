@@ -18,7 +18,7 @@ const Pool = () => {
 
     useEffect(() => {
         const parsedPools = data?.map((pool: any, i: number) => ({
-            id: i+1,
+            id: i,
             owner: pool.owner,
             name: pool.name,
             description: pool.description,

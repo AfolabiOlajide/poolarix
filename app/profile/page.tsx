@@ -16,7 +16,7 @@ const Profile = () => {
     const { isOpen, toggle } = useDisclosure()
 
     const address = useAddress();
-    const [pools, setPools] = useState<PoolData>();
+    const [pools, setPools] = useState<PoolData[]>();
     // const { getPools, contract } = useAppContext();
     const { data: contract } = useContract(DEPLOYED_CONTRACT);
 
@@ -24,7 +24,7 @@ const Profile = () => {
 
     useEffect(() => {
         const parsedPools = data?.map((pool: any, i: number) => ({
-            id: i + 1,
+            id: i,
             owner: pool.owner,
             name: pool.name,
             description: pool.description,
