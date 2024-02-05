@@ -7,7 +7,7 @@ import {
     useConnect,
     useDisconnect,
 } from "@thirdweb-dev/react";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { toast } from "sonner";
 
 const metamaskConfig = metamaskWallet({
@@ -47,13 +47,13 @@ export const ConnectButton = () => {
     );
 };
 
-export const MainButton = ({ onClick }: { onClick: () => void }) => {
+export const MainButton = ({ onClick, children }: { onClick?: () => void, children: React.ReactNode }) => {
     return (
         <div
             className={`heading p-2 bg-main text-dark text-[1.3rem] font-bold rounded-md cursor-pointer trans hover:scale-105 button-shadow`}
             onClick={onClick}
         >
-            Connect Wallet
+            {children}
         </div>
     );
 };
