@@ -21,6 +21,7 @@ Poolarix is a lottery pool decentralized application...
 
 - [x] Generate Winners randomly using API3 quantum random number Generation.
 - [x] Free Gas (Possible by utilizing Light link's enterprise mode)
+- [x] Used BlockScout Explorer to track deployed contarct address.
 
 ## Future Features
 - [ ] Ability to use lottery boxes in the future

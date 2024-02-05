@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Philosopher:wght@400;700&display=swap');
+
+
+
+.heading{
+  font-family: 'Philosopher', sans-serif;
+}
+
+.text-size-global{
+  @apply text-[1.2rem] md:text-[3rem]
+}
+
+.trans{
+  @apply  transition-all duration-300 ease-in-out;
+}
+
+.button-shadow{
+  box-shadow: 0 0 1rem rgba(250, 242, 177, .6),
+              0 0 4rem rgba(250, 242, 177, .6),
+              0 0 8rem rgba(250, 242, 177, .3)
+}
+
+
+
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
