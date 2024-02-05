@@ -20,7 +20,9 @@
               0 0 8rem rgba(250, 242, 177, .3)
 }
 
-
+.input-control{
+  @apply outline-none border border-main focus:ring-2 focus:ring-main/60 p-3 w-full placeholder:text-gray-500 text-white bg-transparent rounded-md
+}
 
 
 

@@ -26,6 +26,10 @@ export default function RootLayout({
                 <Toaster richColors  position="top-right" />
                 <ThirdWebProviderContainer>
                     <div
+                        className="relative z-[3]"
+                        id="loading-screen"
+                    ></div>
+                    <div
                         className="relative z-[2]"
                         id="create-pool-modal"
                     ></div>

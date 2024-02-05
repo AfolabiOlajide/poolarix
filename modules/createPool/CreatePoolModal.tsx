@@ -20,8 +20,8 @@ const CreatePoolModal = ({isOpen, toggle}: {isOpen: boolean, toggle?: () => void
     return mounted ? createPortal(
         <main className={`createPoolModal ${isOpen ? "block" : "hidden"} fixed top-0 right-0 bottom-0 left-0`}>
             <div className="covering absolute z-[1] top-0 bottom-0 right-0 left-0 bg-black/10 backdrop-blur-[2rem]" onClick={toggle}></div>
-            <div className="output min-h-[2rem] rounded-lg bg-slate-200 p-[2rem] relative z-[2] mt-[5%] max-w-[90%] mx-auto">
-                <CreatePool />
+            <div className="output min-h-[2rem] rounded-lg bg-ash p-[2rem] relative z-[2] mt-[5%] md:w-[60%] max-w-[90%] mx-auto">
+                <CreatePool toggle={toggle} />
             </div>
         </main>, portal as HTMLElement
     ) : null;
