@@ -10,12 +10,12 @@ const CreatePool = ({toggle}: {toggle?: () => void}) => {
     const [name, setName] = useState<string>("");
     const [description, setDescription] = useState<string>("");
     const [numberOfTickets, setnumberOfTickets] = useState<number>();
-    const [ticketPrice, setTicketPrice] = useState<number>();
+    const [ticketPrice, setTicketPrice] = useState<string>();
     const [numberOfWinner, setNumberOfWinners] = useState<number>();
     const [endDate, setEndDate] = useState<number>();
     const [freeEntry, setFreeEntry] = useState<boolean>(false);
 
-    const canCreate = Boolean(name) && Boolean(description)  && Boolean(numberOfTickets)  && Boolean(ticketPrice === 0 || ticketPrice as number > 0)  && Boolean(numberOfWinner); 
+    const canCreate = Boolean(name) && Boolean(description)  && Boolean(numberOfTickets)  && Boolean(ticketPrice)  && Boolean(numberOfWinner); 
 
     const { contract } = useContract(DEPLOYED_CONTRACT);
     const { mutateAsync: createPool, isLoading } = useContractWrite(
@@ -34,7 +34,7 @@ const CreatePool = ({toggle}: {toggle?: () => void}) => {
                     name,
                     description,
                     numberOfTickets,
-                    ticketPrice,
+                    parseInt(ticketPrice as string),
                     numberOfWinner,
                     freeEntry,
                 ],
@@ -45,7 +45,7 @@ const CreatePool = ({toggle}: {toggle?: () => void}) => {
             setName('')
             setDescription("")
             setnumberOfTickets(0)
-            setTicketPrice(0)
+            setTicketPrice("")
             setNumberOfWinners(0);
             setEndDate(0)
         } catch (err) {
@@ -118,17 +118,17 @@ const CreatePool = ({toggle}: {toggle?: () => void}) => {
                 {/* ticket price */}
                 <div className="form-control">
                     <input
-                        type="number"
+                        type="text"
                         name="name"
                         placeholder="Ticket  (If Pool is free put 0)"
                         className="input-control"
                         value={ticketPrice}
                         onChange={(e) =>
-                            setTicketPrice(parseInt(e.target.value))
+                            setTicketPrice(e.target.value)
                         }
                     />
                 </div>
-                {/* End Date */}Price
+                {/* End Date */}
                 <div className="form-control">
                     <input
                         type="datetime-local"

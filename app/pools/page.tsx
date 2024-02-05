@@ -44,7 +44,7 @@ const Pool = () => {
 
     return (
         <div>
-            <header className="heading text-[2rem] text-purp text-center">All Pools</header>
+            <header className="heading text-[2rem] text-purp text-center">Pool Gallery</header>
             {
                 isLoading ? <LoadingComponent /> : (
                     <div className="pool-list grid grid-cols-4 gap-4">
