@@ -47,7 +47,7 @@ const Pool = () => {
             <header className="heading text-[2rem] text-purp text-center">Pool Gallery</header>
             {
                 isLoading ? <LoadingComponent /> : (
-                    <div className="pool-list grid grid-cols-4 gap-4">
+                    <div className="pool-list grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                         {
                             data && (pools as unknown as PoolData[])?.map((pool: PoolData, i: number) => {
                                 return <PoolContainer key={pool.id} id={i+1} pool={pool} />

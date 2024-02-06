@@ -37,12 +37,12 @@ export const ConnectButton = () => {
 
     return (
         <div
-            className={`heading p-2 bg-main text-dark text-[1.3rem] font-bold rounded-md cursor-pointer trans hover:scale-105 button-shadow
+            className={`heading p-2 bg-main text-dark text-[.8rem] md:text-[1.3rem] font-bold rounded-md cursor-pointer trans hover:scale-105 button-shadow
                         flex flex-col items-center justify-center`}
             onClick={address ? handleDisconnect : handleConnectWallet}
         >
             {address ? "Disconnect": "Connect Wallet"}
-            <span className="address text-[.8rem]">{address && TruncateAddress(address)}</span>
+            <span className="address text-[.6rem] md:text-[.8rem]">{address && TruncateAddress(address)}</span>
         </div>
     );
 };

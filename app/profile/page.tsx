@@ -84,11 +84,11 @@ const Profile = () => {
                             <header className="heading text-purp text-[2rem] ">
                                 Created Pool
                             </header>
-                            <div className="add w-[3rem] h-[3rem] rounded-full bg-main/35 text-dark text-[2rem] flex justify-center items-center cursor-pointer" onClick={toggle}>
+                            <div className="add w-[1.8rem] h-[1.8rem] md:w-[3rem] md:h-[3rem] rounded-full bg-main/35 text-dark text-[.8rem] md:text-[2rem] flex justify-center items-center cursor-pointer" onClick={toggle}>
                                 <FaPlus />
                             </div>
                         </div>
-                        <div className="pool-list grid grid-cols-4 gap-4">
+                        <div className="pool-list grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                             {data &&
                                 (pools as unknown as PoolData[])?.map(
                                     (pool: PoolData, i: number) => {

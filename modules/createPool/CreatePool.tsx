@@ -68,7 +68,7 @@ const CreatePool = ({ toggle }: { toggle?: () => void }) => {
             {/* loading screen */}
             {isLoading && <LoadingScreen />}
             <div className="head flex items-center justify-center">
-                <header className="bg-main px-[2.3rem] py-[1rem] rounded-md text-dark heading text-[2rem] font-bold">
+                <header className="bg-main px-[1.5rem] md:px-[2.3rem] py-[.6rem] md:py-[1rem] rounded-md text-dark heading text-[.8rem] md:text-[2rem] font-bold">
                     Create Pool
                 </header>
             </div>

@@ -33,7 +33,7 @@ export default function RootLayout({
                         className="relative z-[2]"
                         id="create-pool-modal"
                     ></div>
-                    <div className="relative z-[1] container-cont mx-auto w-[80%]">
+                    <div className="relative z-[1] container-cont mx-auto w-[95%] md:w-[80%]">
                         <NavigationHeader />
                         <main>{children}</main>
                     </div>

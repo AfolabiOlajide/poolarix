@@ -59,7 +59,7 @@ const page = ({ params }: { params: { id: string } }) => {
     const Completionist = () => {
         return (
             <div className="mb-[2rem] flex items-center justify-center">
-                <header className="heading text-main text-[3rem]">
+                <header className="heading text-main text-[1.7rem] md:text-[2rem] lg:text-[3rem]">
                     POOL HAS ENDED
                 </header>
                 {/* <MainButton>Pick Winners</MainButton> */}
@@ -275,7 +275,7 @@ const page = ({ params }: { params: { id: string } }) => {
                         </div>
                     </div>
 
-                    <div className="name text-[3rem] heading text-main mt-[2]">
+                    <div className="name text-[2rem] lg:text-[3rem] heading text-main mt-[2]">
                         {pools && pools[0]?.name}
                     </div>
                     <div className="duration text-[1.2rem] mt-[1.2]">
