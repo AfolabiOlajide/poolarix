@@ -1,2 +1,2 @@
-export const mainNetwork = "Mumbai";
-export const DEPLOYED_CONTRACT="0xC4bc8d33a5aC6d3474796F19Ba4a5c59C73401AF"
+export const mainNetwork = "LightlinkPegasusTestnet";
+export const DEPLOYED_CONTRACT="0xc29c64bb7Ea3D5F9190a46f06CAC8f236fc4399F"

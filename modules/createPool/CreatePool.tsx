@@ -2,6 +2,7 @@ import { MainButton } from "@/components/Buttons";
 import LoadingScreen from "@/components/LoadingScreen";
 import { DEPLOYED_CONTRACT } from "@/utils/exports";
 import { useContract, useContractWrite } from "@thirdweb-dev/react";
+import { ethers } from "ethers";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
 
@@ -26,7 +27,7 @@ const CreatePool = ({ toggle }: { toggle?: () => void }) => {
     const { contract } = useContract(DEPLOYED_CONTRACT);
     const { mutateAsync: createPool, isLoading } = useContractWrite(
         contract,
-        "createPool"
+        "createPool",
     );
 
     const call = async () => {
@@ -41,10 +42,11 @@ const CreatePool = ({ toggle }: { toggle?: () => void }) => {
                     description,
                     numberOfTickets,
                     endDate,
-                    parseInt(ticketPrice as string),
+                    ethers.BigNumber.from(Number(ticketPrice)),
                     numberOfWinner,
                     freeEntry,
                 ],
+                overrides: { gasPrice: 0}
             });
             toast.success("Pool creation successful");
             toggle;
